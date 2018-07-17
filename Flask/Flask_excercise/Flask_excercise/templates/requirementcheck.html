@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <p>
+    {% if upper==False%}
+      <p>This username does not contain a upper case letter</p>
+    {% endif %}
+    {% if lower==False%}
+      <p>This username does not contain a lower case letter</p>
+    {% endif %}
+    {% if num==False%}
+      <p>It did not end with a number</p>
+    {% endif %}
+
+    {% if lower and upper and lower%}
+      <p>{{username}} is a great username!</p>
+    {% endif %}
+  </p>
+</div>
+{% endblock %}
